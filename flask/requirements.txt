@@ -1,5 +1,5 @@
 # Upgrade pip first
-pip>=25.2
+# pip>=25.2
 
 # Core ML / TF packages
 tensorflow==2.13.0
