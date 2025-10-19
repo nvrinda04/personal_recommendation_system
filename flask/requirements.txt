@@ -130,7 +130,7 @@ sympy==1.13.1
 tb-nightly==2.19.0a20250218
 tensorboard-data-server==0.7.2
 termcolor==3.0.1
-tf_nightly==2.21.0
+tensorflow==2.21.0
 threadpoolctl==3.5.0
 tldextract==5.2.0
 tokenizers==0.21.1
