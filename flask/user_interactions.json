@@ -1,0 +1,565 @@
+{
+    "interactions": {
+        "guest_user": [
+            {
+                "domain": "movies",
+                "item": "Joker",
+                "type": "rating",
+                "rating": 4.0
+            },
+            {
+                "domain": "movies",
+                "item": "3 Idiots",
+                "type": "favorite",
+                "rating": null
+            },
+            {
+                "domain": "movies",
+                "item": "3 Idiots",
+                "type": "rating",
+                "rating": 4.0
+            },
+            {
+                "domain": "movies",
+                "item": "Inception",
+                "type": "favorite",
+                "rating": null
+            },
+            {
+                "domain": "movies",
+                "item": "Inception",
+                "type": "rating",
+                "rating": 5.0
+            },
+            {
+                "domain": "movies",
+                "item": "Eega",
+                "type": "rating",
+                "rating": 5.0
+            },
+            {
+                "domain": "movies",
+                "item": "Charlie 777",
+                "type": "favorite",
+                "rating": null
+            },
+            {
+                "domain": "movies",
+                "item": "Charlie 777",
+                "type": "rating",
+                "rating": 4.0
+            },
+            {
+                "domain": "movies",
+                "item": "The Avengers",
+                "type": "rating",
+                "rating": 4.0
+            },
+            {
+                "domain": "movies",
+                "item": "Jigarthanda",
+                "type": "favorite",
+                "rating": null
+            },
+            {
+                "domain": "movies",
+                "item": "Jigarthanda",
+                "type": "rating",
+                "rating": 4.0
+            },
+            {
+                "domain": "movies",
+                "item": "Drishyam",
+                "type": "favorite",
+                "rating": null
+            },
+            {
+                "domain": "movies",
+                "item": "The Dark Knight",
+                "type": "favorite",
+                "rating": null
+            },
+            {
+                "domain": "movies",
+                "item": "Interstellar",
+                "type": "favorite",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Levitating",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Shape of You",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "movies",
+                "item": "Blinding Lights",
+                "type": "favorite",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Watermelon Sugar",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Shape of You",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Shape of You",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Levitating",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Dance Monkey",
+                "type": "favorite",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Shivers",
+                "type": "favorite",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Watermelon Sugar",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Levitating",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "movies",
+                "item": "Butter",
+                "type": "favorite",
+                "rating": null
+            },
+            {
+                "domain": "movies",
+                "item": "Montero",
+                "type": "favorite",
+                "rating": null
+            },
+            {
+                "domain": "movies",
+                "item": "Shape of You",
+                "type": "favorite",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Levitating",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Levitating",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Watermelon Sugar",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Bad Habits",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Levitating",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "movies",
+                "item": "Paan Singh Tomar",
+                "type": "favorite",
+                "rating": null
+            },
+            {
+                "domain": "movies",
+                "item": "Finding Nemo",
+                "type": "favorite",
+                "rating": null
+            },
+            {
+                "domain": "movies",
+                "item": "Premam",
+                "type": "favorite",
+                "rating": null
+            },
+            {
+                "domain": "movies",
+                "item": "Pasanga",
+                "type": "favorite",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Levitating",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Levitating",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Levitating",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Levitating",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Levitating",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Levitating",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Jimikki Kammal",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "movies",
+                "item": "Watermelon Sugar",
+                "type": "favorite",
+                "rating": null
+            },
+            {
+                "domain": "books",
+                "item": "The Silent Patient",
+                "type": "favorite",
+                "rating": null
+            },
+            {
+                "domain": "books",
+                "item": "Harry Potter and the Sorcerer's Stone",
+                "type": "favorite",
+                "rating": null
+            },
+            {
+                "domain": "movies",
+                "item": "Joker",
+                "type": "favorite",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Kutty Story",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Kutty Story",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Kutty Story",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Levitating",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Levitating",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Rowdy Baby",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Rowdy Baby",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Rowdy Baby",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Rowdy Baby",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Vaathi Coming",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Butta Bomma Tamil",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Mind Block",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Enjoy Enjaami",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Blinding Lights",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "movies",
+                "item": "hello",
+                "type": "favorite",
+                "rating": null
+            },
+            {
+                "domain": "movie",
+                "item": "Premam",
+                "type": "recommendation_request",
+                "rating": null
+            },
+            {
+                "domain": "movie",
+                "item": "Premam",
+                "type": "recommendation_request",
+                "rating": null
+            },
+            {
+                "domain": "movie",
+                "item": "Premam",
+                "type": "recommendation_request",
+                "rating": null
+            },
+            {
+                "domain": "movies",
+                "item": "Mahanati",
+                "type": "favorite",
+                "rating": null
+            },
+            {
+                "domain": "movies",
+                "item": "Soorarai Pottru",
+                "type": "favorite",
+                "rating": null
+            },
+            {
+                "domain": "books",
+                "item": "Project Hail Mary",
+                "type": "favorite",
+                "rating": null
+            },
+            {
+                "domain": "movies",
+                "item": "Coco",
+                "type": "favorite",
+                "rating": null
+            },
+            {
+                "domain": "movies",
+                "item": "OMG: Oh My God!",
+                "type": "favorite",
+                "rating": null
+            },
+            {
+                "domain": "books",
+                "item": "Raag Darbari",
+                "type": "favorite",
+                "rating": null
+            },
+            {
+                "domain": "movies",
+                "item": "Levitating",
+                "type": "favorite",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Shape of You",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Shape of You",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "lalaland",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "pop",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Enjoy Enjaami",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "nee chithram choosi",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "books",
+                "item": "The Hobbit",
+                "type": "favorite",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Tum Hi Ho",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Tum Hi Ho",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Tum Hi Ho",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Ghungroo",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Ghungroo",
+                "type": "similar_request",
+                "rating": null
+            },
+            {
+                "domain": "songs",
+                "item": "Ghungroo",
+                "type": "similar_request",
+                "rating": null
+            }
+        ]
+    },
+    "ratings": {
+        "Inception": [
+            3.0,
+            5.0
+        ],
+        "The Matrix": [
+            4.0
+        ],
+        "Interstellar": [
+            5.0
+        ],
+        "Coco": [
+            4.0
+        ],
+        "Finding Nemo": [
+            5.0
+        ],
+        "Ugramm": [
+            5.0
+        ],
+        "Jersey": [
+            5.0
+        ],
+        "The Avengers": [
+            4.0,
+            4.0
+        ],
+        "Joker": [
+            4.0
+        ],
+        "3 Idiots": [
+            4.0
+        ],
+        "Eega": [
+            5.0
+        ],
+        "Charlie 777": [
+            4.0
+        ],
+        "Jigarthanda": [
+            4.0
+        ]
+    }
+}
