@@ -15,7 +15,12 @@ import json # <--- NEW: Import json for file handling
 # Load environment variables
 # ---------------------------
 # Assuming .env is one level up from the script location if running from backend folder
-load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), "..", "backend", ".env"))
+backend_env_path = os.path.join(os.path.dirname(__file__), "..", "backend", ".env")
+if os.path.exists(backend_env_path):
+    load_dotenv(dotenv_path=backend_env_path)
+else:
+    # Fallback to default .env (Render or local flask/.env)
+    load_dotenv()
 
 
 # ---------------------------
