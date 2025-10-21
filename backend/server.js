@@ -14,7 +14,7 @@ connectDB();
 app.use(
   "/api/recommend", // When frontend sends to /api/recommend...
   createProxyMiddleware({
-    target: "http://localhost:5001", // ...forward to Flask
+    target: "https://flask-app-1ak5.onrender.com", // ...forward to Flask
     changeOrigin: true,
   })
 );
