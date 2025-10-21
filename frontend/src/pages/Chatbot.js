@@ -17,7 +17,7 @@ function Chatbot({ isInline }) {
 
     try {
       // Call backend API for bot response
-      const res = await axios.post("http://127.0.0.1:5001/chat", { message: input });
+      const res = await axios.post("https://flask-app-1ak5.onrender.com/chat", { message: input });
       const botMsg = { text: res.data.reply, type: "bot" };
       setMessages((prev) => [...prev, botMsg]);
     } catch {

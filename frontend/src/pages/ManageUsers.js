@@ -13,7 +13,7 @@ function ManageUsers() {
   const fetchUsers = async () => {
     try {
       setLoading(true);
-      const res = await fetch("http://localhost:5000/api/auth/users");
+      const res = await fetch("https://personal-recommendation-system.onrender.com/api/auth/users");
       const data = await res.json();
       setUsers(data);
     } catch (err) {
@@ -31,7 +31,7 @@ function ManageUsers() {
   // Update role
   const updateRole = async (id, role) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/auth/users/${id}`, {
+      const res = await fetch(`https://personal-recommendation-system.onrender.com/api/auth/users/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ role }),
@@ -52,7 +52,7 @@ function ManageUsers() {
     if (!window.confirm("Are you sure you want to delete this user?")) return;
 
     try {
-      const res = await fetch(`http://localhost:5000/api/auth/users/${id}`, {
+      const res = await fetch(`https://personal-recommendation-system.onrender.com/api/auth/users/${id}`, {
         method: "DELETE",
       });
 

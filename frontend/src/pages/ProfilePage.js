@@ -559,7 +559,7 @@ const ProfilePage = () => {
     const fetchProfile = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get('http://localhost:5000/api/auth/profile', {
+        const res = await axios.get('https://personal-recommendation-system.onrender.com/api/auth/profile', {
           headers: { 'x-auth-token': token },
         });
         setProfileData(res.data);

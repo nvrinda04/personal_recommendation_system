@@ -15,7 +15,7 @@ function ManageRecommendations() {
   const fetchMovies = async () => {
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5001/api/movies");
+      const res = await fetch("https://flask-app-1ak5.onrender.com/api/movies");
       const data = await res.json();
       setMovies(data);
     } catch (err) {
@@ -30,7 +30,7 @@ function ManageRecommendations() {
   const fetchBooks = async () => {
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5001/api/books");
+      const res = await fetch("https://flask-app-1ak5.onrender.com/api/books");
       const data = await res.json();
       setBooks(Array.isArray(data) ? data : []);
     } catch (err) {
@@ -45,7 +45,7 @@ function ManageRecommendations() {
   const fetchSongs = async () => {
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5001/api/songs");
+      const res = await fetch("https://flask-app-1ak5.onrender.com/api/songs");
       const data = await res.json();
       setSongs(Array.isArray(data) ? data : []);
     } catch (err) {
@@ -65,7 +65,7 @@ function ManageRecommendations() {
   // Movie actions
   const updateMovie = async (id, updatedMovie) => {
     try {
-      await fetch(`http://localhost:5001/api/movies/${id}`, {
+      await fetch(`https://flask-app-1ak5.onrender.com/api/movies/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedMovie),
@@ -78,7 +78,7 @@ function ManageRecommendations() {
 
   const deleteMovie = async (id) => {
     try {
-      await fetch(`http://localhost:5001/api/movies/${id}`, { method: "DELETE" });
+      await fetch(`https://flask-app-1ak5.onrender.com/api/movies/${id}`, { method: "DELETE" });
       fetchMovies();
     } catch (err) {
       console.error(err);
@@ -190,7 +190,7 @@ function ManageRecommendations() {
                     <button
                       style={styles.deleteBtn}
                       onClick={async () => {
-                        await fetch(`http://localhost:5001/api/books/${book.index}`, { method: "DELETE" });
+                        await fetch(`https://flask-app-1ak5.onrender.com/api/books/${book.index}`, { method: "DELETE" });
                         setBooks(books.filter((b) => b.book_id !== book.book_id));
                       }}
                     >
@@ -224,7 +224,7 @@ function ManageRecommendations() {
                     <button
                       style={styles.deleteBtn}
                       onClick={async () => {
-                        await fetch(`http://localhost:5001/api/songs/${song.index}`, { method: "DELETE" });
+                        await fetch(`https://flask-app-1ak5.onrender.com/api/songs/${song.index}`, { method: "DELETE" });
                         setSongs(songs.filter((s) => s.index !== song.index));
                       }}
                     >

@@ -635,7 +635,7 @@ function Dashboard() {
       const userId = localStorage.getItem("email") || "guest_user";
       try {
         const res = await axios.post(
-          "http://localhost:5001/recommend/adaptive",
+          "https://flask-app-1ak5.onrender.com/recommend/adaptive",
           { user_id: userId },
           { headers: { "Content-Type": "application/json" } }
         );
@@ -656,7 +656,7 @@ function Dashboard() {
     if (loadingSurprise) return;
     setLoadingSurprise(true);
     try {
-      const res = await axios.post("http://localhost:5001/api/surprise", {});
+      const res = await axios.post("https://flask-app-1ak5.onrender.com/api/surprise", {});
       setSurpriseItem(res.data);
       setShowSurprise(true);
       setFabMenuOpen(false);
