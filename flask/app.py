@@ -739,7 +739,7 @@ def delete_movie(index):
     except Exception as e:
         print("Error deleting movie:", str(e))
         return jsonify({"error":str(e)}),500
-books = pd.read_csv("books.csv")
+
 
 @app.route('/api/books', methods=['GET'])
 def get_books():
