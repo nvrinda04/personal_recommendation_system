@@ -14,12 +14,11 @@ import json # <--- NEW: Import json for file handling
 # ---------------------------
 # Load environment variables
 # ---------------------------
-# Assuming .env is one level up from the script location if running from backend folder
 backend_env_path = os.path.join(os.path.dirname(__file__), "..", "backend", ".env")
 if os.path.exists(backend_env_path):
     load_dotenv(dotenv_path=backend_env_path)
 else:
-    # Fallback to default .env (Render or local flask/.env)
+
     load_dotenv()
 
 
@@ -209,8 +208,6 @@ def log_interaction(user_id, domain, item, interaction_type, rating=None):
     })
     # CRITICAL: Save after every successful log
     save_user_interactions()
-
-
 # ---------------------------
 # Helper Functions (Universal/Refactored)
 # ---------------------------
@@ -534,37 +531,7 @@ def recommend_from_book():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-# ---------------------------
-# Song-Centric Recommendation Endpoints
-# ---------------------------
 
-# def handle_song_request(request, target_domain):
-#     data = request.get_json()
-#     user_song = data.get("song")
-#     if not user_song:
-#         return jsonify({"error": "Song title is required"}), 400
-
-#     try:
-#         try:
-#             genres = extract_genres_from_song(user_song)
-#             if not genres:
-#                 genres = ["Pop"]
-#         except Exception as e:
-#             print("Gemini genre extraction error:", e)
-#             genres = ["Pop"]
-
-#         recommendations_df = pd.DataFrame()
-#         output_type = target_domain
-        
-#         if target_domain == 'similar':
-#             recommendations_df = recommend_songs_from_genres(genres, top_n=5, exclude_title=user_song)
-#             output_type = 'songs'
-#         elif target_domain == 'books':
-#             recommendations_df = recommend_books_from_genres(genres, top_n=5)
-#         elif target_domain == 'movies':
-#             recommendations_df = recommend_cosine_similar_movies(genres, top_n=5)
-#         else:
-#             return jsonify({"error": "Invalid recommendation type"}), 400
 
 def map_song_genres_to_movie_genres(song_genres):
     mapping = {
@@ -1044,16 +1011,7 @@ def adaptive_recommend_movies(user_id, top_n=5, random_sample=True):
         top_candidates = top_candidates.head(top_n)
     
     return top_candidates[['title', 'genres', 'age_group', 'similarity']].reset_index(drop=True)
-# ---------------------------
-# Helper: Detect book genres using Gemini
-# ---------------------------
-# ---------------------------
-# Helper: Detect book genres using Gemini (with caching)
-# ---------------------------
-# In-memory genre cache
-# ---------------------------
-# In-memory genre cache
-# ---------------------------
+
 genre_cache = {}  # {title_lower: [genres]}
 
 # ---------------------------
@@ -1319,7 +1277,4 @@ def adaptive_recommend():
 # Run Server
 # ---------------------------
 if __name__ == '__main__':
-    # Save data one final time before exit (optional, but good practice)
-    # NOTE: This only works well if the server is shut down cleanly (e.g., using Ctrl+C)
-    # For immediate saving, saving is done inside log_interaction().
     app.run(debug=True,port=5001)
