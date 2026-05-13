@@ -389,8 +389,7 @@
 
 
 
-
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaFilm, FaBook, FaMusic } from 'react-icons/fa';
 import styled, { keyframes, createGlobalStyle } from 'styled-components'; // Added createGlobalStyle
