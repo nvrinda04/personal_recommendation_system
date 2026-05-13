@@ -553,7 +553,7 @@ const StatusMessage = styled.span`
 const ProfilePage = () => {
   const navigate = useNavigate();
   const [profileData, setProfileData] = useState(null);
-  const [status, setStatus] = useState({ message: '', error: false });
+  const [status] = useState({ message: '', error: false });
 
   useEffect(() => {
     const fetchProfile = async () => {
