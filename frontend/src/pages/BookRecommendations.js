@@ -1080,7 +1080,7 @@ function BookRecommendations() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get("https://flask-app-1ak5.onrender.com/favorites")
+        axios.get("https://personalrecommendationsystem-production.up.railway.app/favorites")
             .then(res => setFavorites(res.data.favorites || []))
             .catch(err => console.error("Failed to fetch favorites:", err));
     }, []);
@@ -1089,10 +1089,10 @@ function BookRecommendations() {
         const key = 'books'; // Your backend uses 'movie' as a generic key
         try {
             if (favorites.includes(bookTitle)) {
-                const res = await axios.delete("https://flask-app-1ak5.onrender.com/favorites/remove", { data: { [key]: bookTitle } });
+                const res = await axios.delete("https://personalrecommendationsystem-production.up.railway.app/favorites/remove", { data: { [key]: bookTitle } });
                 setFavorites(res.data.favorites || []);
             } else {
-                const res = await axios.post("https://flask-app-1ak5.onrender.com/favorites/add", { [key]: bookTitle });
+                const res = await axios.post("https://personalrecommendationsystem-production.up.railway.app/favorites/add", { [key]: bookTitle });
                 setFavorites(res.data.favorites || []);
             }
         } catch (err) {
@@ -1107,7 +1107,7 @@ function BookRecommendations() {
         
         const payload = { book: bookTitle };
         // --- CHANGED ---: All buttons call the SAME new endpoint
-        const endpoint = "https://flask-app-1ak5.onrender.com/recommend/from-book"; 
+        const endpoint = "https://personalrecommendationsystem-production.up.railway.app/recommend/from-book"; 
 
         setLoading(true);
         setShowRecommendOptions(false); // Hide buttons after click

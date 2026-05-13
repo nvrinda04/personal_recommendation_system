@@ -304,7 +304,7 @@ function ManageRecommendations() {
   const fetchMovies = async () => {
     setLoading(true);
     try {
-      const res = await fetch("https://flask-app-1ak5.onrender.com/api/movies");
+      const res = await fetch("https://personalrecommendationsystem-production.up.railway.app/api/movies");
       const data = await res.json();
       setMovies(data);
     } catch (err) {
@@ -319,7 +319,7 @@ function ManageRecommendations() {
   const fetchBooks = async () => {
     setLoading(true);
     try {
-      const res = await fetch("https://flask-app-1ak5.onrender.com/api/books");
+      const res = await fetch("https://personalrecommendationsystem-production.up.railway.app/api/books");
       const data = await res.json();
       setBooks(Array.isArray(data) ? data : []);
     } catch (err) {
@@ -334,7 +334,7 @@ function ManageRecommendations() {
   const fetchSongs = async () => {
     setLoading(true);
     try {
-      const res = await fetch("https://flask-app-1ak5.onrender.com/api/songs");
+      const res = await fetch("https://personalrecommendationsystem-production.up.railway.app/api/songs");
       const data = await res.json();
       setSongs(Array.isArray(data) ? data : []);
     } catch (err) {
@@ -354,7 +354,7 @@ function ManageRecommendations() {
   // Movie actions
   const updateMovie = async (id, updatedMovie) => {
     try {
-      await fetch(`https://flask-app-1ak5.onrender.com/api/movies/${id}`, {
+      await fetch(`https://personalrecommendationsystem-production.up.railway.app/api/movies/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedMovie),
@@ -368,7 +368,7 @@ function ManageRecommendations() {
   // Delete movie with alert and instant remove
   const deleteMovie = async (id) => {
   try {
-    const res = await fetch(`https://flask-app-1ak5.onrender.com/api/movies/${id}`, { method: "DELETE" });
+    const res = await fetch(`https://personalrecommendationsystem-production.up.railway.app/api/movies/${id}`, { method: "DELETE" });
     const data = await res.json();
     if (res.ok) {
       alert(data.message); // simple alert
@@ -489,7 +489,7 @@ function ManageRecommendations() {
                       style={styles.deleteBtn}
                       onClick={async () => {
                         if (!window.confirm("Are you sure you want to delete this book?")) return;
-                        await fetch(`https://flask-app-1ak5.onrender.com/api/books/${book.index}`, { method: "DELETE" });
+                        await fetch(`https://personalrecommendationsystem-production.up.railway.app/api/books/${book.index}`, { method: "DELETE" });
                         setBooks((prev) => prev.filter((_, i) => i !== index));
                         alert("Book deleted!");
                       }}
@@ -525,7 +525,7 @@ function ManageRecommendations() {
                       style={styles.deleteBtn}
                       onClick={async () => {
                         if (!window.confirm("Are you sure you want to delete this song?")) return;
-                        await fetch(`https://flask-app-1ak5.onrender.com/api/songs/${song.index}`, { method: "DELETE" });
+                        await fetch(`https://personalrecommendationsystem-production.up.railway.app/api/songs/${song.index}`, { method: "DELETE" });
                         setSongs((prev) => prev.filter((_, i) => i !== index));
                         alert("Song deleted!");
                       }}

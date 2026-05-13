@@ -3419,18 +3419,18 @@ function MovieRecommendations() {
     }, []);
 
     useEffect(() => {
-        fetch("https://flask-app-1ak5.onrender.com/favorites")
+        fetch("https://personalrecommendationsystem-production.up.railway.app/favorites")
             .then((res) => res.json())
             .then((data) => setFavorites(data.favorites || []));
     }, []);
 
     const toggleFavorite = async (movieTitle) => {
         if (favorites.includes(movieTitle)) {
-            const res = await fetch("https://flask-app-1ak5.onrender.com/favorites/remove", { method: "DELETE", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ movie: movieTitle }) });
+            const res = await fetch("https://personalrecommendationsystem-production.up.railway.app/favorites/remove", { method: "DELETE", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ movie: movieTitle }) });
             const data = await res.json();
             setFavorites(data.favorites || []);
         } else {
-            const res = await fetch("https://flask-app-1ak5.onrender.com/favorites/add", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ movie: movieTitle }) });
+            const res = await fetch("https://personalrecommendationsystem-production.up.railway.app/favorites/add", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ movie: movieTitle }) });
             const data = await res.json();
             setFavorites(data.favorites || []);
         }
@@ -3439,9 +3439,9 @@ function MovieRecommendations() {
     const handleRecommend = async (movieTitle, type) => {
         if (!movieTitle.trim()) return;
         let endpoint;
-        if (type === 'similar') endpoint = "https://flask-app-1ak5.onrender.com/recommend";
-        else if (type === 'books') endpoint = "https://flask-app-1ak5.onrender.com/crossrecommend/books";
-        else if (type === 'songs') endpoint = "https://flask-app-1ak5.onrender.com/crossrecommend/songs";
+        if (type === 'similar') endpoint = "https://personalrecommendationsystem-production.up.railway.app/recommend";
+        else if (type === 'books') endpoint = "https://personalrecommendationsystem-production.up.railway.app/crossrecommend/books";
+        else if (type === 'songs') endpoint = "https://personalrecommendationsystem-production.up.railway.app/crossrecommend/songs";
         else return;
 
         setLoading(true);

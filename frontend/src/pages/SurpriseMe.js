@@ -99,7 +99,7 @@ export default function SurpriseMe() {
     setLoading(true);
     try {
       const prompt = "Give me a random movie, book, or song with title, category, genre, description in JSON format";
-      const res = await axios.post("https://flask-app-1ak5.onrender.com/api/surprise", { prompt });
+      const res = await axios.post("https://personalrecommendationsystem-production.up.railway.app/api/surprise", { prompt });
       setItem(res.data);
     } catch (err) {
       console.error(err);

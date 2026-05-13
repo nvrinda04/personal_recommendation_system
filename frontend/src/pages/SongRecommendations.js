@@ -1127,14 +1127,14 @@ function SongRecommendations() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get("https://flask-app-1ak5.onrender.com/favorites")
+        axios.get("https://personalrecommendationsystem-production.up.railway.app/favorites")
             .then((res) => setFavorites(Array.from(new Set(res.data.favorites || []))))
             .catch((err) => console.error("Failed to fetch favorites:", err));
     }, []);
 
     const toggleFavorite = async (songTitle) => {
         try {
-            const url = "https://flask-app-1ak5.onrender.com/favorites/";
+            const url = "https://personalrecommendationsystem-production.up.railway.app/favorites/";
             let res;
             if (favorites.includes(songTitle)) {
                 res = await axios.delete(url + "remove", { data: { movie: songTitle } }); // 'movie' key is used by backend
@@ -1150,9 +1150,9 @@ function SongRecommendations() {
     const handleRecommend = async (songTitle, domain) => {
         if (!songTitle.trim()) return;
         let endpoint = "";
-        if (domain === 'similar') endpoint = "https://flask-app-1ak5.onrender.com/crossrecommend/from-song/similar";
-        else if (domain === 'books') endpoint = "https://flask-app-1ak5.onrender.com/crossrecommend/from-song/books";
-        else if (domain === 'movies') endpoint = "https://flask-app-1ak5.onrender.com/crossrecommend/from-song/movies";
+        if (domain === 'similar') endpoint = "https://personalrecommendationsystem-production.up.railway.app/crossrecommend/from-song/similar";
+        else if (domain === 'books') endpoint = "https://personalrecommendationsystem-production.up.railway.app/crossrecommend/from-song/books";
+        else if (domain === 'movies') endpoint = "https://personalrecommendationsystem-production.up.railway.app/crossrecommend/from-song/movies";
         else return;
 
         // Find the song in your dataset to get its genres
