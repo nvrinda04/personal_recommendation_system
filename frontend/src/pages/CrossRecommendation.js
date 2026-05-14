@@ -14,7 +14,7 @@ export default function CrossRecommendation() {
 
     try {
       const res = await axios.post(
-        `https://personalrecommendationsystem-production.up.railway.app/crossrecommend/${target}`,
+        `https://flask-9sty.onrender.com/crossrecommend/${target}`,
         { movie }
       );
 

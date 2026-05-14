@@ -635,7 +635,7 @@ function Dashboard() {
       const userId = localStorage.getItem("email") || "guest_user";
       try {
         const res = await axios.post(
-          "https://personalrecommendationsystem-production.up.railway.app/recommend/adaptive",
+          "https://flask-9sty.onrender.com/recommend/adaptive",
           { user_id: userId },
           { headers: { "Content-Type": "application/json" } }
         );
@@ -656,7 +656,7 @@ function Dashboard() {
     if (loadingSurprise) return;
     setLoadingSurprise(true);
     try {
-      const res = await axios.post("https://personalrecommendationsystem-production.up.railway.app/api/surprise", {});
+      const res = await axios.post("https://flask-9sty.onrender.com/api/surprise", {});
       setSurpriseItem(res.data);
       setShowSurprise(true);
       setFabMenuOpen(false);
